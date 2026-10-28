@@ -34,7 +34,10 @@ export const TaskList = () => {
 
       <div className="flex flex-col rounded-md bg-slate-50 shadow-md dark:bg-slate-800">
         {tasks.map((task) => (
-          <div className="flex items-center gap-2 border-b border-slate-200 px-4 py-2 last:border-b-0 dark:border-slate-800">
+          <div
+            className="flex items-center gap-2 border-b border-slate-200 px-4 py-2 last:border-b-0 dark:border-slate-800"
+            key={task.id}
+          >
             <Checkbox
               key={task.id}
               label={task.title}
